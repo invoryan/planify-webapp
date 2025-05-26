@@ -38,32 +38,8 @@ const QuoteForm = () => {
   };
 
   return (
-    // <form className={styles.form} onSubmit={handleSubmit}>
-    //     <input
-    //         type="text"
-    //         placeholder="DNI o RUC"
-    //         value={form.dniOrRuc}
-    //         onChange={(e) => handleChange('dniOrRuc', e.target.value)}
-    //     />
-    //     {form.errors.dniOrRuc && <p className={styles.error}>{form.errors.dniOrRuc}</p>}
-
-    //     <input
-    //         type="text"
-    //         placeholder="Celular"
-    //         value={form.celular}
-    //         onChange={(e) => handleChange('celular', e.target.value)}
-    //     />
-    //     {form.errors.celular && <p className={styles.error}>{form.errors.celular}</p>}
-    //     <select class="form-select" aria-label="Default select example">
-    //         <option value="dni" selected>Dni</option> 
-    //         <option value="ruc">Ruc</option> 
-    //     </select>
-
-    //   <Button type="submit" text="Cotiza aquí" onClick={() => {}} />
-    // </form>
     <form className={styles.form} onSubmit={handleSubmit}>
         <select
-            className="form-select"
             value={form.documentType}
             onChange={(e) =>
             setForm((prev) => ({ ...prev, documentType: e.target.value as 'dni' | 'ruc' }))
@@ -74,7 +50,7 @@ const QuoteForm = () => {
         </select>
 
         <input
-            type="text"
+            type="number"
             placeholder={form.documentType === 'dni' ? 'Ingrese su DNI' : 'Ingrese su RUC'}
             value={form.dniOrRuc}
             onChange={(e) => handleChange('dniOrRuc', e.target.value)}
@@ -82,7 +58,7 @@ const QuoteForm = () => {
         {form.errors.dniOrRuc && <p className={styles.error}>{form.errors.dniOrRuc}</p>}
 
         <input
-            type="text"
+            type="number"
             placeholder="Celular"
             value={form.celular}
             onChange={(e) => handleChange('celular', e.target.value)}
