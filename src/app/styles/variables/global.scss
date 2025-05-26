@@ -1,6 +1,7 @@
 :root {
     // fonts
     --font-family-main: "Lato", sans-serif;
+     --font-family-alt: 'BR Sonoma', sans-serif;
 
     // s
     --font-size-s: 14px;
@@ -40,4 +41,5 @@
     --drawer-z-index: 100;
     --popover-z-index: 10000;
     --overlay-z-index: -1;
+
 }

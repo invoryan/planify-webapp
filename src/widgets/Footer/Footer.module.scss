@@ -1,0 +1,33 @@
+.footer {
+    background-color: #000000;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footerLeft,
+.footerRight {
+    display: flex;
+    align-items: center;
+    color:white;
+}
+
+@media (max-width: 767.900px) {
+    .footerLeft {
+        width: 100%;
+        border-bottom: 1px solid var(--gray80, #ccc);
+        padding-bottom: 24px;
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .footerRight {
+        width: 100%;
+        justify-content: center;
+    }
+}
