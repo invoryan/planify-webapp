@@ -1,0 +1,28 @@
+@use "./normalize";
+@use "./variables/global";
+@use "./theme/dark";
+@use "./theme/light";
+
+body {
+    font: var(--font-m);
+    color: var(--primary-color);
+
+    // for firefox
+    scrollbar-color: var(--scrollbar-color) #eae5e5;
+
+    a,
+    a:visited {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.App {
+    background-color: var(--bg-color);
+    height: 100vh;
+    color: var(--primary-color);
+}
+
+.main-content {
+    display: flex;
+}
